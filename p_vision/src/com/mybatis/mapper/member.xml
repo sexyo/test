@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+	<select id="check_email" parameterType="String" resultType="string">
+		select mem_id from member
+	</select>
+	<insert id="proc_register" parameterType="map" statementType="CALLABLE">
+		{call proc_register(#{P_MEM_ID,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_PW,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_BIRTHDAY,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_PHONE,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_ADDR,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_MAIL,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_NAME,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{P_MEM_JOB,mode=IN,jdbcType=VARCHAR,javaType=java.lang.String}
+						 ,#{R_RESULT,mode=OUT,jdbcType=INTEGER,javaType=java.lang.Integer}
+						)}
+	</insert>	
+	
+
+</mapper>

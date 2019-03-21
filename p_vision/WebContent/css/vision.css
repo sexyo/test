@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+   font-family: 'Namum Gothic';
+}
+a {
+   color: #000000;
+   text-decoration: none; 
+}
+a:hover {
+   color: #bbbbbb;
+   text-decoration: none;
+   cursor: pointer; 
+}
+.navbar-default {배경색상
+   background-color: #000000;
+   border-color: #000000;
+}
+.navber-default .navber-brand {/* 내비게이션 제목 색상 */
+   color: #ffffff;
+}
+/* .navber-default .navber-brand:hover, */
+/* .navber-default .navber-brand:focus {내비게이션 제목에 마우스를 올렸을 때 */
+/* 	background-colr: transparent; */
+/* 	color: #bbbbbb; */
+/* }  */

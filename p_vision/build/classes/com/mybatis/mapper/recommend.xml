@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="recommendMapper">
+	<select id="allCards" resultType="map">
+		select brand_name from brand
+	</select>
+	<select id="eatCard" resultType="map">
+		select brand_name from brand where cate_num = (select cate_num from category where cate_name='외식')
+	</select>
+	<select id="communityCard" resultType="map">
+		select brand_name from brand where cate_num = (select cate_num from category where cate_name='교통')
+	</select>
+	<select id="tripCard" resultType="map">
+		select brand_name from brand where cate_num = (select cate_num from category where cate_name='여행')
+	</select>
+	<select id="convenCard" resultType="map">
+		select brand_name from brand where cate_num = (select cate_num from category where cate_name='편의점')
+	</select>
+	<select id="oilCard" resultType="map">
+		select brand_name from brand where cate_num = (select cate_num from category where cate_name='주유')
+	</select>
+	<select id="myRecommendCard" resultType="map">
+		select brand_name from brand where cate_num = (select cate_num from category where cate_name='외식')
+	</select>
+	
+
+</mapper>
